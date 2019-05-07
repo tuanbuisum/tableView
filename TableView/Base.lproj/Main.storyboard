@@ -251,6 +251,10 @@
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWY-8U-6Er">
                                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="59.666666666666664"/>
+                                                                            <accessibility key="accessibilityConfiguration" identifier="identifermuse"/>
+                                                                            <connections>
+                                                                                <action selector="btnMuse:" destination="bWc-Az-fQG" eventType="touchUpInside" id="jsB-Z1-rKt"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -279,6 +283,10 @@
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-FA-okC">
                                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="59.666666666666664"/>
+                                                                            <accessibility key="accessibilityConfiguration" identifier="plus"/>
+                                                                            <connections>
+                                                                                <action selector="btnPlus:" destination="bWc-Az-fQG" eventType="touchUpInside" id="OzK-R6-tZL"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -321,6 +329,9 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ee-X0-0dc">
                                                                     <rect key="frame" x="0.0" y="0.0" width="56" height="18"/>
+                                                                    <connections>
+                                                                        <action selector="btnRemove:" destination="bWc-Az-fQG" eventType="touchUpInside" id="bn9-is-O2T"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

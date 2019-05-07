@@ -8,8 +8,14 @@
 
 import UIKit
 
-class classTableViewCell: UITableViewCell {
+protocol optionDelegate {
+    func dataDelegate(data: String )
+}
 
+class classTableViewCell: UITableViewCell  {
+
+    var delegate: optionDelegate? = nil
+    
     @IBOutlet weak var imageItem: UIImageView!
     
     
@@ -46,6 +52,41 @@ class classTableViewCell: UITableViewCell {
         lblNumBer.font = UIFont(name: "HelveticaNeue", size: 30)
         lblRemove.textColor = UIColor.red
         lblRemove.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
+        
     }
+    
+    @IBAction func btnMuse(_ sender: Any) {
+        
+        lblNumBer.text = String(Int(lblNumBer.text!)! - 1 )
 
+        if lblNumBer.text == String(-1) {
+            
+            lblNumBer.text = String(Int(lblNumBer.text!)! + 1)
+        }
+    }
+    
+    @IBAction func btnPlus(_ sender: Any) {
+        
+        lblNumBer.text = String(Int(lblNumBer.text!)! + 1)
+        
+        if lblNumBer.text == String(10) {
+            
+            lblNumBer.text = String(Int(lblNumBer.text!)! - 1)
+
+            }
+        if delegate != nil{
+            if lblNumBer.text != nil{
+                let data = lblNumBer.text
+                delegate?.dataDelegate(data: data!)
+                
+            }
+        }
+
+    }
+    @IBAction func btnRemove(_ sender: Any) {
+        
+        lblNumBer.text = String("0")
+        
+    }
+    
 }
